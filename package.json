@@ -1,6 +1,6 @@
 {
   "name": "gemini-fetch-cjs",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Load data from the Gemini protocol the way you would fetch from HTTP in JavaScript (in a non-user-hostile module format!)",
   "main": "index.js",
   "scripts": {

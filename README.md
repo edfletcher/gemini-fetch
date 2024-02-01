@@ -4,7 +4,7 @@ Load data from the Gemini protocol the way you would fetch from HTTP in JavaScri
 ## Usage
 
 ```
-npm i --save gemini-fetch
+npm i gemini-fetch-cjs
 ```
 
 ```js
@@ -22,11 +22,7 @@ console.log(await response.text())
 ## CLI
 
 ```
-npm i -g gemini-fetch
-
-gemini-fetch gemini://gemini.circumlunar.space/
-
-# Or use npx
+npm i gemini-fetch-cjs
 
 npx gemini-fetch gemini://gemini.circumlunar.space/
 ```
