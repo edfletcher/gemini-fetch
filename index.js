@@ -1,6 +1,6 @@
-import request from '@derhuerst/gemini/client.js'
-import makeFetch from 'make-fetch'
-import { Readable } from 'stream'
+const request = require('@derhuerst/gemini/client')
+const makeFetch = require('make-fetch')
+const { Readable } = require('stream')
 
 const DEFAULT_OPTS = {
   followRedirects: true,
@@ -10,7 +10,7 @@ const DEFAULT_OPTS = {
   }
 }
 
-export default function makeGemini (opts = {}) {
+module.exports = function makeGemini (opts = {}) {
   const finalOpts = { ...DEFAULT_OPTS, opts }
   return makeFetch(({ url, referrer }, sendResponse) => {
     const toRequest = new URL(url, referrer)
@@ -44,7 +44,7 @@ export default function makeGemini (opts = {}) {
   })
 }
 
-export function intoStream (data) {
+function intoStream (data) {
   return new Readable({
     read () {
       this.push(data)

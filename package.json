@@ -6,7 +6,6 @@
   "scripts": {
     "test": "node test"
   },
-  "type": "module",
   "bin": "bin.js",
   "repository": {
     "type": "git",
